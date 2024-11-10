@@ -1,0 +1,99 @@
+<body>
+    <div class="main-wrapper">
+        <div class="page-content instructor-page-content">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xl-3 col-lg-4 col-md-12 theiaStickySidebar">
+                        <div class="settings-widget dash-profile">
+                            <div class="settings-menu p-0">
+                                <div class="profile-bg">
+                                    <h5>Beginner</h5>
+                                    <img src="assets/img/instructor-profile-bg.jpg" alt>
+                                    <div class="profile-img">
+                                        <a href="instructor-profile.html"><img src="assets/img/user/user15.jpg" alt></a>
+                                    </div>
+                                </div>
+                                <div class="profile-group">
+                                    
+                                    <div class="go-dashboard text-center">
+                                        <a routerLink="/addPost" class="btn btn-primary">Create New Post</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-widget account-settings">
+                            <div class="settings-menu">
+                                <h3>DASHBOARD</h3>
+                                <ul>
+
+                                    <li class="nav-item active">
+                                        <a routerLink="/listPost" class="nav-link">
+                                            <i class="feather-book"></i> My Posts
+                                        </a>
+                                    </li>
+                                 
+                                  
+                                    
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-xl-9 col-lg-8 col-md-12">
+
+                        <div class="card settings-inner-blk p-0">
+                            <div class="widget-set sell-course-head comman-space">
+                                <!-- ... Remaining HTML content ... -->
+                                <div class="widget-content multistep-form">
+                                    <div class="widget-content multistep-form">
+                                        <form class="field-card">
+                                            <div class="add-course-info">
+                                                <div class="add-course-inner-header">
+                                                    <h4>Courses Media</h4>
+                                                </div>
+                                                <div class="add-course-form">
+                                                    <form action="#">
+
+                                                        <div class="input-block">
+                                                            <label class="add-course-label">Post cover image</label>
+                                                            <div class="relative-form">
+
+                                                                <div *ngIf="selectedFile">
+                                                                    <span>{{selectedFile.name}}</span>
+                                                                </div>
+                                                                <label class="relative-file-upload">
+                                                                    Upload File <input type="file"
+                                                                        (change)="onFileSelected($event)">
+                                                                </label>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+                                                </div>
+                                                <div class="widget-btn">
+                                                    <a class="btn btn-black prev_btn">Previous</a>
+                                                    <button (click)="onUpload()"
+                                                        class="btn btn-info-light next_btn">Continue</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+        
+        
+    </div>
+</body>

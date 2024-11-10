@@ -1,0 +1,158 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.main-wrapper {
+  padding: 20px;
+  background-color: #f0f8ff;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  background-color: #eaf4ff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-bg {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  background-color: #2d7ccc;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.profile-bg h5 {
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.profile-img {
+  margin-top: -40px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.profile-img img {
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+}
+
+.profile-group {
+  margin-top: 20px;
+}
+
+.profile-group h4 a {
+  color: #2d7ccc;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #2d7ccc;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.settings-widget h3 {
+  color: #2d7ccc;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.settings-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.settings-menu ul li {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #2d7ccc;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.nav-link i {
+  margin-right: 10px;
+}
+
+/* Main Content Styling */
+.settings-inner-blk {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-course-info h4 {
+  color: #2d7ccc;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.input-block {
+  margin-bottom: 15px;
+}
+
+.input-block label {
+  color: #333;
+  font-weight: bold;
+}
+
+.form-control {
+  border: 1px solid #c5d3e2;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.ck-editor__editable_inline {
+  min-height: 150px;
+  border: 1px solid #c5d3e2;
+  border-radius: 5px;
+  padding: 10px;
+  color: #333;
+}
+
+.widget-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn-back, .btn-continue {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.btn-back {
+  background-color: #ddd;
+  border: none;
+  color: #333;
+}
+
+.btn-continue {
+  background-color: #2d7ccc;
+  border: none;
+  color: #fff;
+}
+
+.btn-back:hover, .btn-continue:hover {
+  opacity: 0.9;
+}

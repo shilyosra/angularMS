@@ -1,0 +1,145 @@
+/* Global Styles */
+body, .main-wrapper {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1e3a8a; /* Blue background */
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.settings-widget {
+    margin-bottom: 20px;
+}
+
+.settings-menu {
+    text-align: center;
+}
+
+.profile-bg h5 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.profile-group .role {
+    color: #d1e4ff;
+    font-size: 14px;
+}
+
+.btn-create {
+    margin-top: 10px;
+    background-color: #2563eb; /* Blue button */
+    color: #ffffff;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 10px 0;
+}
+
+.nav-item.active .nav-link {
+    color: #60a5fa; /* Lighter blue for active links */
+    font-weight: bold;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #93c5fd;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card {
+    border: none;
+}
+
+.add-course-info h4 {
+    font-size: 20px;
+    color: #1e3a8a; /* Blue title color */
+    margin-bottom: 20px;
+}
+
+.add-course-form .input-block {
+    margin-bottom: 15px;
+}
+
+.input-block label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #1e3a8a;
+}
+
+/* Buttons */
+.widget-btn-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-back, .btn-continue {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn-back {
+    background-color: #3b82f6; /* Blue for back button */
+    color: #fff;
+}
+
+.btn-continue {
+    background-color: #2563eb; /* Darker blue for continue button */
+    color: #fff;
+}
+
+.btn-back:hover {
+    background-color: #1d4ed8;
+}
+
+.btn-continue:hover {
+    background-color: #1e40af;
+}
+
+/* Form */
+.post-form {
+    background-color: #f0f8ff;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* CKEditor Styles */
+.ck.ck-editor__editable {
+    min-height: 200px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 10px;
+    border: 1px solid #d1e4ff;
+    border-radius: 5px;
+}

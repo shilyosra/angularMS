@@ -1,0 +1,165 @@
+/* Global Styles */
+body, .main-wrapper {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.settings-widget {
+    margin-bottom: 20px;
+}
+
+.settings-menu {
+    text-align: center;
+}
+
+.profile-bg h5 {
+    color: #ffffff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn-create {
+    background-color: #2563eb;
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+.dashboard-title {
+    color: #d1e4ff;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    padding: 10px 0;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-link:hover {
+    color: #93c5fd;
+}
+
+.nav-item.active .nav-link {
+    color: #60a5fa;
+    font-weight: bold;
+}
+
+/* Main Content */
+.main-content {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-inner-blk {
+    border: none;
+}
+
+.widget-set h3 {
+    font-size: 20px;
+    color: #1e3a8a;
+    margin-bottom: 10px;
+}
+
+.widget-set p {
+    color: #555;
+}
+
+.search-group {
+    display: flex;
+    align-items: center;
+}
+
+.search-group i {
+    margin-right: 8px;
+    color: #2563eb;
+}
+
+.form-control {
+    border: 1px solid #d1e4ff;
+    border-radius: 5px;
+    padding: 8px 12px;
+}
+
+.input-block select.form-select {
+    background-color: #f0f8ff;
+    border: 1px solid #d1e4ff;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Table Styles */
+.table {
+    border: 1px solid #d1e4ff;
+}
+
+.table thead th {
+    background-color: #1e3a8a;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #e6f1ff;
+}
+
+.table tbody td {
+    padding: 12px 15px;
+    vertical-align: middle;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: #4caf50;
+    color: #ffffff;
+    margin-right: 5px;
+}
+
+.btn-danger {
+    background-color: #f44336;
+    color: #ffffff;
+}
+
+.btn-success:hover {
+    background-color: #388e3c;
+}
+
+.btn-danger:hover {
+    background-color: #d32f2f;
+}
+
+/* Image Styling */
+.sell-group-img img {
+    border-radius: 5px;
+    max-width: 60px;
+    height: auto;
+}

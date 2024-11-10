@@ -1,0 +1,107 @@
+<body>
+    <div class="main-wrapper">
+        <div class="page-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-xl-3 col-lg-4 col-md-12 sidebar">
+                        <div class="settings-widget dash-profile">
+                            <div class="settings-menu">
+                                <div class="profile-bg">
+                                    <h5>CoreFlexGym</h5>
+                                    <div class="profile-img">
+                                        <a href="instructor-profile.html"><img src="assets/img/user/user15.jpg" alt="User Profile"></a>
+                                    </div>
+                                </div>
+                                <div class="profile-group text-center">
+                                    <a routerLink="/addPost" class="btn btn-primary btn-create">Create New Post</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-widget account-settings">
+                            <div class="settings-menu">
+                                <h3 class="dashboard-title">DASHBOARD</h3>
+                                <ul class="nav-list">
+                                    <li class="nav-item active">
+                                        <a routerLink="/listPost" class="nav-link">
+                                            <i class="feather-book"></i> My Posts
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="col-xl-9 col-lg-8 col-md-12 main-content">
+                        <div class="settings-widget settings-inner-blk">
+                            <div class="widget-set sell-course-head">
+                                <h3>My Posts</h3>
+                                <p>Manage your posts, updates, interactions, deletions, and insights.</p>
+                            </div>
+                            <div class="comman-space pb-0">
+                                <div class="instruct-search-blk">
+                                    <div class="row gx-2 align-items-center">
+                                        <div class="col-md-6">
+                                            <div class="search-group">
+                                                <i class="feather-search"></i>
+                                                <input type="text" class="form-control" [(ngModel)]="searchInput" placeholder="Search Post" (input)="onSearch()">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-block select-form">
+                                                <select class="form-select" id="sortBy" [(ngModel)]="sortBy" (change)="onSortChange()">
+                                                    <option value="idPost">Choose</option>
+                                                    <option value="datePost">Date</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="settings-tickets-blk course-instruct-blk table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Posts</th>
+                                                <th>Comments</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let post of filteredPosts">
+                                                <td>
+                                                    <div class="sell-table-group d-flex align-items-center">
+                                                        <div class="sell-group-img">
+                                                            <img *ngIf="post.photo" [src]="getPostPhotoUrl(post)" alt="Post Photo" class="img-fluid">
+                                                        </div>
+                                                        <div class="sell-tabel-info">
+                                                            <p><a [routerLink]="['/detailsPost/', post.idPost]">{{ post.content }}</a></p>
+                                                            <div class="course-info d-flex align-items-center">
+                                                                <div class="course-view">
+                                                                    <p>ID: {{ post.idPost }}</p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </td>
+                                                <td> <!-- Comments section could go here if needed --></td>
+                                                <td>
+                                                    <div class="profile-share d-flex justify-content-center">
+                                                        <button (click)="navigateToUpdate(post.idPost)" class="btn btn-success">Update</button>
+                                                        <button (click)="deletePost(post)" class="btn btn-danger">Delete</button>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

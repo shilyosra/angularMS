@@ -1,0 +1,65 @@
+<body>
+    <div class="main-wrapper">
+        <div class="page-content instructor-page-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-xl-3 col-lg-4 col-md-12 sidebar">
+                        <div class="settings-widget dash-profile">
+                            <div class="settings-menu">
+                                <div class="profile-bg">
+                                    <h5>CoreFlexGym</h5>
+                                    <div class="profile-img">
+                                        <!-- Profile image can be added here if necessary -->
+                                    </div>
+                                </div>
+                                <div class="profile-group text-center">
+                                    <p class="role">Instructor</p>
+                                    <a routerLink="/addPost" class="btn btn-primary btn-create">Create New Post</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-widget account-settings">
+                            <div class="settings-menu">
+                                <ul class="nav-list">
+                                    <li class="nav-item active">
+                                        <a routerLink="/listPost" class="nav-link">
+                                            <i class="feather-book"></i> My Posts
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Main Content -->
+                    <div class="col-xl-9 col-lg-8 col-md-12 main-content">
+                        <div class="card settings-inner-blk">
+                            <div class="widget-set sell-course-head comman-space">
+                                <div class="widget-content multistep-form">
+                                    <form [formGroup]="Postsaveform" (submit)="savePost()" class="post-form">
+                                        <fieldset id="first">
+                                            <div class="add-course-info">
+                                                <h4>Basic Information</h4>
+                                                <div class="add-course-form">
+                                                    <div class="input-block">
+                                                        <label for="content">Post Content</label>
+                                                        <ckeditor [editor]="Editor" formControlName="content" name="content"></ckeditor>
+                                                    </div>
+                                                </div>
+                                                <div class="widget-btn-group">
+                                                    <a class="btn btn-back">Back</a>
+                                                    <button type="submit" class="btn btn-continue">Continue</button>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: "db"
+      MYSQL_USER: "kaycer"
+      MYSQL_PASSWORD: "root"
+      MYSQL_ROOT_PASSWORD: "root"
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  spring-boot-app:
+    image: caeser9/tp-foyer:1.0.0
+    environment:
+      SPRING_DATASOURCE_URL: "jdbc:mysql://mysql:3306/db?createDatabaseIfNotExist=true"
+      SPRING_DATASOURCE_USERNAME: "kaycer"
+      SPRING_DATASOURCE_PASSWORD: "root"
+      SERVER_PORT: 8089
+      SERVER_SERVLET_CONTEXT_PATH: "/tpfoyer"
+    ports:
+      - "8089:8089"
+    depends_on:
+      - mysql
+    restart: 
+      always
+
+  angular-app:
+    image: caeser9/angular-app:1.0.0
+    ports:
+      - "81:81"
+    depends_on:
+      - spring-boot-app
+
+  
+volumes:
+  mysql_data:

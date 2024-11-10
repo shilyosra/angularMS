@@ -1,0 +1,84 @@
+<section class="course-content">  
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+                <!-- Post Content -->
+                <div class="post" *ngIf="post">
+                    <div class="post-photo">
+                        <a [routerLink]="['/detailsPost/', post.idPost]">
+                            <img class="img-fluid" *ngIf="post" [src]="getPostPhotoUrl(post.photo)" alt="Post photo">
+                        </a>
+                    </div>
+                    <div class="blog-info">
+                        <ul class="post-meta">
+                            <li><img src="assets/img/icon/icon-22.svg" alt="Date">{{post.datePost}}</li>
+                            <li><img src="assets/img/icon/icon-23.svg" alt="Content">{{post.content}}</li>
+                        </ul>
+                    </div>
+                    <div class="blog-content">
+                        <div [innerHTML]="post.content"></div>
+                    </div>
+                </div>
+
+                <!-- Post Edit Form -->
+                <form [formGroup]="Postsaveform" (ngSubmit)="savePost()" class="post-form">
+                    <div class="input-block">
+                        <label for="content">Post Content</label>
+                        <ckeditor [editor]="Editor" formControlName="content" name="content"></ckeditor>
+                    </div>
+                    <!-- Add other form controls here if needed -->
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn-primary">Save</button>
+                      
+                    </div>
+                </form>
+
+                <!-- Comment Section -->
+                <div class="comments-section">
+                    <h3>Commentaires</h3>
+                    <div class="comment-list" *ngFor="let comment of comments">
+                        <div class="comment">
+                            <div class="comment-author">
+                                <img src="/assets/img/user/user1.jpg" alt="User Image" class="author-image">
+                                <span>Yosra Shil</span>
+                            </div>
+                            <div class="comment-text">
+                                <p>{{comment.commentaire}}</p>
+                            </div>
+                            <div class="comment-actions">
+                                <span (click)="toggleReplyInput(comment.id)">Reply</span>
+                            </div>
+
+                            <!-- Reply Input -->
+                            <div class="reply-input" *ngIf="showReplyInput[comment.id]">
+                                <form (ngSubmit)="addReply(comment.id)">
+                                    <input type="text" [(ngModel)]="replyText" name="replyText" placeholder="Ecrire votre reponse ici..." class="reply-field">
+                                    <button type="submit" class="send-btn">Send</button>
+                                </form>
+                            </div>
+
+                            <!-- Display Replies -->
+                            <div class="replies" *ngIf="comment.replay && comment.replay.length > 0">
+                                <div class="reply" *ngFor="let reply of comment.replay">
+                                    <div class="reply-author">
+                                        <img src="/assets/img/user/user.jpg" alt="User Image" class="author-image">
+                                        <span>Kaycer Khouini</span>
+                                    </div>
+                                    <div class="reply-text">
+                                        <p>{{reply.commentaire}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Add Comment -->
+                    <div class="add-comment">
+                        <input type="text" [(ngModel)]="interaction.commentaire" name="commentaire" placeholder="Ecrire votre commentaire ici..." class="comment-field">
+                        <button (click)="addInteraction()" class="send-btn">Send</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

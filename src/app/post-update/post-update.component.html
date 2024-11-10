@@ -1,0 +1,73 @@
+<body>
+    <div class="main-wrapper">
+        <div class="page-content instructor-page-content">
+            <div class="container">
+                <div class="row">
+                    <!-- Sidebar -->
+                    <div class="col-xl-3 col-lg-4 col-md-12 sidebar">
+                        <div class="settings-widget dash-profile">
+                            <div class="settings-menu">
+                                <div class="profile-bg">
+                                    <h5>Beginner</h5>
+                                    <div class="profile-img">
+                                        <a href="instructor-profile.html"><img src="assets/img/user/user15.jpg" alt="User Profile"></a>
+                                    </div>
+                                </div>
+                                <div class="profile-group text-center">
+                                    <h4><a href="instructor-profile.html">Jenny Wilson</a></h4>
+                                    <p>Instructor</p>
+                                    <a routerLink="/addPost" class="btn btn-primary btn-create">Create New Post</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-widget account-settings">
+                            <h3 class="dashboard-title">DASHBOARD</h3>
+                            <ul>
+                                <li class="nav-item active">
+                                    <a routerLink="/listPost" class="nav-link">
+                                        <i class="feather-book"></i> My Posts
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Main Content -->
+                    <div class="col-xl-9 col-lg-8 col-md-12">
+                        <div class="settings-inner-blk">
+                            <div class="widget-set sell-course-head">
+                                <h4>Basic Information</h4>
+                                <div class="add-course-form">
+                                    <form (ngSubmit)="save()" #updateForm="ngForm">
+                                        <div class="input-block">
+                                            <label class="add-course-label">Post Content</label>
+                                            <ckeditor [editor]="Editor"
+                                                      [config]="{ toolbar: ['heading', '|', 'bold', 'italic', 'link', 'bulletedList', 'numberedList', 'blockQuote'] }"
+                                                      formControlName="content">
+                                            </ckeditor>
+                                        </div>
+
+                                        <!-- Image Preview Block -->
+                                        <div class="input-block">
+                                            <label class="add-course-label">Image du Post</label>
+                                            <div *ngIf="post?.photo">
+                                                <img [src]="post.photo" alt="Image du post">
+                                            </div>
+                                        </div>
+
+                                        <!-- Action Buttons -->
+                                        <div class="widget-btn">
+                                            <button class="btn btn-black">Back</button>
+                                            <button type="submit" class="btn btn-info-light">Continue</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
